@@ -1,15 +1,23 @@
+import java.util.Scanner;
 /**
- *
- * @author 
+ * Creates a lists of numbers up to a given number
+ * @author Thomas Quigley
  */
 public class Main {
-
-  /**
-   * The method that is executed when you hit the run button.
-   * @param args the command line arguments
-   */
   public static void main(String[] args) {
-    // TODO code application logic here
+    Scanner input = new Scanner(System.in);
+    // get a number from the user
+    System.out.println("Please enter a positive integer");
+    int userNumber = input.nextInt();
+    // create a for loop that counts up to the users number
+    for (int i = 0; i < userNumber - 1; i++) {
+      // the i + 1 counters the i starting at 0
+      System.out.print((i + 1) + ", ");
+    }
+
+    // finish the list with the users number
+    System.out.print(userNumber);
+
     
   }
 }
